@@ -1,0 +1,19 @@
+.completed {
+    background-color: green;
+}
+
+.incomplete {
+    background-color: red;
+}
+
+.priority1 {
+    color: blue;
+}
+
+.priority2 {
+    color: red;
+}
+
+.priority3 {
+    color: green;
+}

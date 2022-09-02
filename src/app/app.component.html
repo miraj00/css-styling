@@ -1,0 +1,28 @@
+<h1>To Do Items</h1>
+
+<table>
+    <thead>
+        <td>Task</td>
+        <td>Completed?</td>
+        <td>Priority</td>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let t of taskList">
+            <td [ngClass]="t.isFinished ? 'completed' : 'incomplete'">{{ t.task }}</td>
+            <!-- There are other ways to write this and accomplish exactly the same thing -->
+            <!-- <td [class.completed]="t.isFinished" [class.incomplete]="!t.isFinished">{{ t.task }}</td> -->
+          
+            <td>{{ t.isFinished }} </td>
+            <!-- If you have more than two classes, you can use a function to return the class -->
+            <td [ngClass]="getPriorityColor(t)" [ngStyle]="{'font-size': '20px'}">{{ t.priority }}</td>
+        </tr>
+    </tbody>
+
+</table>
+
+<br>
+<br>
+
+<input name="color" [(ngModel)]="color">
+<div [ngStyle]="{'color': color}">Change my color</div>
